@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="stile.css">
+    <link rel="shortcut icon" href="img/Luffys_flag_icon-icons.com_76118.png" type="image/x-icon">
+    <title>Alura Geek</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"
+        rel="stylesheet">
+</head>
+ 
+<body>
+    <header>
+        <img src="../img/Luffys_flag_icon-icons.com_76118.png" alt="icono">
+        <h1 class="titulo">Alura Geek</h1>
+    </header>
+    <main>
+        <section class="produc-list" id="productos">
+            <h1>Mis productos: </h1>
+            <div id="container-products" class="container-products"></div>
+        </section>
+        <aside class="nuevo-producto">
+            <h2>Agregar nuevo producto: </h2>
+            <form id="nuevoProductoForm">
+                <input type="text" id="nombre" placeholder="Nombre del producto" required />
+                <input type="number" id="precio" placeholder="Precio" required />
+                <input type="text" id="imagenUrl" placeholder="URL de la imagen" required />
+                <button type="submit" class="btn-submit">Agregar Producto</button>
+                <button type="button" id="borrarCampos">Borrar</button>
+            </form>
+        </aside>
+    </main>
+    <footer class="footer">
+        <div class="footerP">
+            <div class="conteinerF">
+                <div class="titulogo">
+                    <img class="logoF" src="img/Luffys_flag_icon-icons.com_76118.png" alt="logo">
+                    <h1 class="titulo">Alura Geek</h1>
+                </div>
+                <div class="name">
+                    <h3>Desarrollado por Mayra Moreno</h3>
+                    <div class="socialIcons">
+                        <a href="https://www.facebook.com/mayelialejandra.morenovelasquez.1/" target="_blank"><img src="img/facebook.png" alt="Facebook"></a>
+                        <a href="https://www.instagram.com/m_mayeli/" target="_blank"><img src="img/instagram.png" alt="Instagram"></a>
+                        <a href="www.linkedin.com/in/may-moreno" target="_blank"><img src="img/social.png" alt="Linkedin"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+</html>

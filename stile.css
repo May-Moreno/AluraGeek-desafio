@@ -1,0 +1,262 @@
+body {
+    background: #fff6ff;
+}
+
+header {
+    background: #7141af;
+    display: flex;
+    padding: 25px;
+    align-items: center;
+    margin: 2em 1em;
+    justify-content: center;
+}
+
+.titulo {
+    color: white;
+}
+
+main {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1000px;
+    margin: 20px auto;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 20px auto;
+    display: flex;
+    flex-wrap: wrap-reverse;
+}
+
+.produc-list {
+    flex: 1 1 65%;
+    padding: 0 10px;
+    background: #bd92d5;
+    border-radius: 10px;
+    border: 2px solid #632faa;
+}
+
+.container-products {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    flex-wrap: wrap;
+    height: 50vh;
+    gap: 15px;
+    padding: 15px 50px;
+    overflow-y: scroll;
+}
+
+.container-products::-webkit-scrollbar {
+    display: none;
+}
+
+.card {
+    background-color: #5854af;
+    border: 1px solid #120962;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+    height: 200px;
+    /* Altura fija para todas las tarjetas */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+
+
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+}
+
+.card img {
+    max-width: 100%;
+    border-radius: 8px;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+
+.card-container--info {
+    padding: 10px 0;
+}
+
+.card-container--info p {
+    margin: 5px 0;
+    font-size: 1.2em;
+    color: white;
+}
+
+.card-container--value {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-container--value p {
+    margin: 0;
+    font-size: 1em;
+    color: white;
+}
+
+.card-container--value img {
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+    transition: transform 0.2s;
+}
+
+.card-container--value img:hover {
+    transform: scale(1.1);
+}
+
+.nuevo-producto {
+    flex: 1 1 35%;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    margin-left: 20px;
+    align-items: center;
+}
+
+.nuevo-producto h2 {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+input{
+    padding: 1rem;
+    width: calc(100% - 22px);
+    border-radius: 20px;
+    border: solid 2px #0c1186;
+    font-size: 18px;
+    font-weight: bolder;
+    margin-bottom: 10px;
+}
+.btn-submit{
+    border: solid 2px #f6f6f6;
+    border-radius: 15px;
+    font-size: 18px;
+    width: 200px;
+    height: 40px;
+    background-color: #7141af;
+    color: #f6f6f6;
+    cursor: pointer;
+}
+#borrarCampos{
+    border: solid 2px #7141af;
+    border-radius: 15px;
+    font-size: 18px;
+    width: 90px;
+    height: 40px;
+    background-color: #f6f6f6;
+    cursor: pointer;
+}
+
+.form-buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+footer{
+    background: #7141af;
+    border: solid 2px;
+    border-radius: 5px;
+    padding: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.footerP{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 7px;
+    color: white;
+    padding: 30px;
+}
+.titulogo{
+    display: flex;
+    align-content: center;
+    align-items: center;
+    gap: 5px;
+
+}
+.name{
+    color: #f6f6f6;
+    font-size: 18px;
+    font-weight: 300;
+    align-items: center;
+}
+.titulo{
+    color: #f6f6f6;
+  font-size: 30px;
+  font-weight: 400;
+}
+
+.socialIcons{
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+.socialIcons a img{
+    width: 40px;
+    height: 40px;
+    transition: transform 0.2s;
+}
+
+@media (max-width: 768px) {
+    main {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .productos-list,
+    .nuevo-producto {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+
+    .productos-grid {
+        grid-template-columns: repeat(2, 1fr);
+        height: auto;
+        overflow-y: auto;
+    }
+
+    .card {
+        height: auto;
+    }
+
+    .form-buttons {
+        flex-direction: column;
+    }
+
+    form button,
+    #borrarCampos {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .productos-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.mensaje-contacto {
+    display: none;
+    color: #fff;
+    background-color: #bd92d5;
+    padding: 10px;
+    text-align: center;
+    margin: 10px 0;
+}
